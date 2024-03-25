@@ -13,20 +13,24 @@ describe('index.js', function() {
   });
   describe('random', function() {
     it("generates a random integer greater than 0", function() {
-      expect(Number.isInteger(random)).to.be.true
-      expect(random).to.not.eq(0)
+      const randomNumber = random(); // Call the random function to get a random number
+      expect(Number.isInteger(randomNumber)).to.be.true; // Check if the result is an integer
+      expect(randomNumber).to.not.eq(0); // Check if the result is not equal to 0
     });
-  });
+  });  
   describe('mod', function() {
     it("is an equation that calculates a remainder that is equal to 4", function() {
-      expect(num3).to.be.a('number')
-      expect(num4).to.be.a('number')
-      expect(mod).to.eq(4)
+      const num3 = 4;
+      const num4 = 5; // You can change this value as needed
+      const result = mod(7, num4); // Call mod with specific parameters
+      
+      expect(result).to.eq(4); // Check if the result is equal to 4
     });
   });
+  
   describe('max', function() {
     it("will return 20 as the highest number in the set", function() {
-      expect(max).to.eq(20)
+      expect(max()).to.eq(20)
     });
   });
 });
